@@ -54,6 +54,7 @@ Menu ↔ Regime
 Utilisateur ↔ Role
 Horaire → aucune relation identifiée
 image : aucune relation identifiée
+DemandeContact aucune relation
 
 ## LigneCommande :
 On relie Commande et Menu parce qu'une commande doit savoir quels menus ont été commandés. LigneCommande sert d'intermédiaire pour enregistrer chaque menu, sa quantité et son prix.
@@ -110,10 +111,19 @@ MenuPlat : id_menu (PK + FK) → Menu.id_menu, id_plat (PK + FK) → Plat.id_pla
 PlatAllergene : id_plat (PK + FK) → Plat.id_plat, id_allergene (PK + FK) → Allergene.id_allergene
 
 
-6-Définir les types de données: INT, VARCHAR, DATE, BOOLEAN...
+### 6-Définir les types de données: INT, VARCHAR, DATE, BOOLEAN...
 
-7-Créer le sql de la BDD
+### 7-Créer le sql de la BDD
+fichier schema sql créé,
+tables créées,
+fichiers schema.sql importé dans phpmyadmin,
+BDD+colonnes créées.
 
+### 8- Entités créées
+### 9 config/database.php :
+database.php servira à dire à PHP " voici où se trouve MySQL, voici la BDD à utiliser et voici les ids permettant de s y connecter.
+
+### 10 -Arborescence 
 
 
 
