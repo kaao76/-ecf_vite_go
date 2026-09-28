@@ -125,6 +125,10 @@ database.php servira à dire à PHP " voici où se trouve MySQL, voici la BDD à
 
 ### 10 -Arborescence 
 
+## Pour l instant la BDD reste telle quelle,
+
+### 11-Création View.
+
 
 
 
