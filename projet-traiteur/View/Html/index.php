@@ -16,17 +16,19 @@
     ========================== -->
 
     <header class="header">
-
-        <h1>Vite & Gourmand</h1>
+        <div class="logo">
+            <h1>Vite & Gourmand</h1>
 
         <p>Traiteur depuis 25 ans</p>
+        </div>
 
         <nav class="navigation">
-            <a href="index.php">Accueil</a>
-            <a href="menus.php">Nos menus</a>
-            <a href="contact.php">Contact</a>
-            <a href="connexion.php">Connexion</a>
-            <a href="inscription.php">Inscription</a>
+
+            <a href="index.php" class="active"> Accueil</a>
+            <a href="menus.php"> Nos menus</a>
+            <a href="contact.php"> Contact</a>
+            <a href="connexion.php"> Connexion</a>
+            <a href="inscription.php"> Inscription</a>
         </nav>
 
     </header>
@@ -41,10 +43,11 @@
         <!-- Présentation principale -->
 
         <section class="hero">
+            
 
-            <h2>25 ans de savoir-faire</h2>
+            <h2><span class="doré">25 ans</span> de savoir-faire</h2>
 
-            <h1>Vite & Gourmand</h1>
+            <h1><span class="doré">Vite & </span>Gourmand</h1>
 
             <p>
                 La gastronomie au service de vos plus beaux moments.
@@ -195,7 +198,7 @@
 
         <section class="evenements">
 
-            <h2>Vos événements</h2>
+            <h4>VOS ÉVÉNEMENTS </h4>
 
             <h3>Notre expertise pour tous vos moments</h3>
             <div class="evenements-liste">
