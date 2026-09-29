@@ -200,11 +200,12 @@
             <h3>Notre expertise pour tous vos moments</h3>
             <div class="evenements-liste">
 
-
+               
                 <article class="evenement">
+                    <img src="../../images/event_mariage.jpg" alt="Événement Mariage">
 
                     <h3>Mariage</h3>
-
+                    
                 </article>
 
 
