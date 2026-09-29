@@ -72,7 +72,8 @@
             <div class="menus-cartes">
 
                 <article class="menu">
-
+                   <img src="../../images/menu_classique.jpg" alt="Menu Classique">
+                    
                     <h3>Menu Classique</h3>
 
                     <p>
@@ -91,6 +92,7 @@
                 <article class="menu">
 
                     <h3>Menu Gourmand</h3>
+                    <img src="../../images/menu_gourmand.jpg" alt="Menu Gourmand">
 
                     <p>
                         Le plaisir des bons produits.
@@ -108,6 +110,7 @@
                 <article class="menu">
 
                     <h3>Menu Prestige</h3>
+                    <img src="../../images/menu_prestige.jpg" alt="Menu Prestige">
 
                     <p>
                         Une expérience culinaire unique.
@@ -123,6 +126,7 @@
 
 
                 <article class="menu">
+                    <img src="../../images/menu_sur_mesure.jpg" alt="Menu Sur-Mesure">
 
                     <h3>Menu Sur-Mesure</h3>
 
@@ -143,7 +147,7 @@
         <section class="histoire">
             <!-- photo du chef -->
             <div class="histoire-image">
-                <img src
+                <img src="../../images/chef_cooking2.png" alt="Chef Vite & Gourmand">
             </div>
 
 
