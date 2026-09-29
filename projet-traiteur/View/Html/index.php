@@ -90,9 +90,10 @@
 
 
                 <article class="menu">
+                    <img src="../../images/menu_gourmand.jpg" alt="Menu Gourmand">
 
                     <h3>Menu Gourmand</h3>
-                    <img src="../../images/menu_gourmand.jpg" alt="Menu Gourmand">
+                    
 
                     <p>
                         Le plaisir des bons produits.
@@ -108,9 +109,10 @@
 
 
                 <article class="menu">
+                    <img src="../../images/menu_prestige.jpg" alt="Menu Prestige">
 
                     <h3>Menu Prestige</h3>
-                    <img src="../../images/menu_prestige.jpg" alt="Menu Prestige">
+                    
 
                     <p>
                         Une expérience culinaire unique.
@@ -197,7 +199,6 @@
 
             <h3>Notre expertise pour tous vos moments</h3>
             <div class="evenements-liste">
-                <img src="../../images/event_wedding.jpg" alt="Événement Mariage">
 
 
                 <article class="evenement">
@@ -216,6 +217,7 @@
 
 
                 <article class="evenement">
+                    <img src="../../images/event_birthday.jpg" alt="Événement Anniversaire">
 
                     <h3>Anniversaire</h3>
 
