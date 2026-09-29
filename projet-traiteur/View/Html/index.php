@@ -197,6 +197,7 @@
 
             <h3>Notre expertise pour tous vos moments</h3>
             <div class="evenements-liste">
+                <img src="../../images/event_wedding.jpg" alt="Événement Mariage">
 
 
                 <article class="evenement">
@@ -207,6 +208,7 @@
 
 
                 <article class="evenement">
+                    <img src="../../images/event_corporate.jpg" alt="Événement Entreprise">
 
                     <h3>Entreprise</h3>
 
@@ -221,6 +223,7 @@
 
 
                 <article class="evenement">
+                    <img src="../../images/event_family.jpg" alt="Événement Fête de famille">
 
                     <h3>Fête de famille</h3>
 
