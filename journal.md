@@ -128,6 +128,12 @@ database.php servira à dire à PHP " voici où se trouve MySQL, voici la BDD à
 ## Pour l instant la BDD reste telle quelle,
 
 ### 11-Création View.
+### 12 fichier index.php + code html + classes
+### style css
+
+css ok.
+-ajout de class=menus-cartes poue que la phrase d accroche soit audessus+ css 
+
 
 
 

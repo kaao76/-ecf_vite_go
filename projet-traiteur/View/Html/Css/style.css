@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f3e8;
+    color: #333333;
+}
+
+/* Header Styles */
+
+.header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    color: #7a1735;
+}
+
+.header p {
+    margin: 5px 0 15px;
+}
+
+/* Navigation Styles */
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.navigation a {
+    color: #7a1735;
+    text-decoration: none;
+}
+
+/* Main Section Styles */
+main section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+main h2 {
+    color: #7a1735;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #eee2d0;
+}
+
+.hero h1 {
+    color: #7a1735;
+}
+
+/* Menu Section Styles */
+.menus {
+    background-color: #ffffff;
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.menus h2 {
+    margin-bottom: 5px;
+}
+
+.menus > h3 {
+    margin-bottom: 30px;
+}
+
+.menus-cartes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu {
+    display: inline-block;
+    vertical-align: top;
+    width: 22%;
+    min-height: 200px;
+    margin: 10px;
+    padding: 25px;
+    background-color: #f8f3e8;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Histoire Section Styles */
+/* Histoire */
+
+.histoire {
+    display: flex;
+    padding: 0;
+    text-align: left;
+    min-height: 400px;
+}
+
+/* Photo à gauche */
+
+.histoire-image {
+    width: 35%;
+}
+
+.histoire-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Texte au milieu */
+
+.histoire-contenu {
+    width: 35%;
+    padding: 50px;
+    background-color: #7a1735;
+    color: #ffffff;
+}
+
+.histoire-contenu h2 {
+    color: #ffffff;
+}
+
+
+/* Avantages à droite */
+
+.histoire-avantages {
+    width: 30%;
+    padding: 40px;
+    background-color: #f8f3e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+.histoire-avantages div {
+    padding-left: 20px;
+}
+
+.histoire-avantages h3 {
+    margin: 0 0 5px;
+}
+
+.histoire-avantages p {
+    margin: 0;
+}
+
+/* Events Section Styles */
+/* Evenements */
+
+.evenements {
+    background-color: #eee2d0;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.evenements-liste {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.evenement {
+    width: 220px;
+    height: 140px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*avis Section Styles */
+
+.avis {
+    background-color: #ffffff;
+}
+
+/* Contact Section Styles */
+
+.contact {
+    background-color: #7a1735;
+    color: #ffffff;
+}
+
+.contact h2 {
+    color: #ffffff;
+}
+
+/*bouton Styles */
+
+.bouton {
+    display: inline-block;
+    background-color: #7a1735;
+    color: #ffffff;
+    padding: 12px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+
+.footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
