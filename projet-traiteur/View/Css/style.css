@@ -114,13 +114,14 @@ main h2 {
 
     padding: 70px 80px;
 
-    background-image: url('../../../images/photo_presentation.png');
+    background-image: url('../../images/image_hero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     color: white;
     text-align: left;
+    
 }
 
 .hero h2 {
