@@ -134,6 +134,40 @@ database.php servira à dire à PHP " voici où se trouve MySQL, voici la BDD à
 css ok.
 -ajout de class=menus-cartes poue que la phrase d accroche soit audessus+ css 
 
+page index => css à finaliser,
+
+### creation fichier menus.php pour la vision globale des menus
+1- Header => inclus avec header.php
+2- Introduction : <h1> Nos menus + description
+3- Filtres:
+Prix maximum.
+Fourchette de prix
+Thème
+Régime
+Nombre minimum de personnes
+Bouton filtrer
+
+4- Liste des menus:
+Menu Classique,
+Menus Gourmand,
+Menu Prestige,
+
+5-Section intentionnée; Pourquoi choisir vite et gourmand
+
+6- Footer: inclus avec footer.php
+
+Etape 1 structure HTML => OK.
+Etape 2 Préparer les données des menus ( avec data-*)
+Etape 3 Faire fonctionner les filtres
+Etape 4 Css: filtres + cartes des menus + images + boutons + section pourquoi + responsibve
+Etape 5 Ajouter les images de menus
+Etape 6 Page detail : lien + page qui va afficher galerie, description + theme + regime + entrée...
+Etape 7 Relier à la BDD, BDD -> PHP -> Données des menus -> menus.php (les infos viendront de la bdd)
+Etape 8 POO organiser tout avec les classes PHP
+Etape 9 Gestion, contruire les fonctionnalités permettant aux utilisateurs autorisés de gérer les données
+        =Employé -> gestion des menus / plats ...etc
+        Admin -> gestion plus complète
+
 
 
 
