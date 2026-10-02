@@ -19,16 +19,15 @@
         <div class="logo">
             <h1>Vite & Gourmand</h1>
 
-        <p>Traiteur depuis 25 ans</p>
+            <p>Traiteur depuis 25 ans</p>
         </div>
 
-        <nav class="navigation">
-
-            <a href="../Html/index.php" class="active"> Accueil</a>
-            <a href="../Html/menus.php"> Nos menus</a>
-            <a href="../Html/contact.php"> Contact</a>
-            <a href="../Html/connexion.php"> Connexion</a>
-            <a href="../Html/inscription.php"> Inscription</a>
+        <nav class="navbar">
+            <a href="../Html/index.php">Accueil</a>
+            <a href="../Html/menus.php">Nos menus</a>
+            <a href="../Html/contact.php">Contact</a>
+            <a href="../Html/connexion.php">Connexion</a>
+            <a href="../Html/inscription.php" class="btn-inscription">Inscription</a>
         </nav>
 
     </header>

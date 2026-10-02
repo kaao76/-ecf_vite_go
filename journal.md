@@ -170,5 +170,9 @@ Etape 9 Gestion, contruire les fonctionnalités permettant aux utilisateurs auto
 
 
 
+### pour le filtre on ne laissera que la fourchette et l utilisateur peut utiliser soit avec min unique ou max ounique oubien min et max 
+
+
+
 
 

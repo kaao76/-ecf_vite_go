@@ -15,11 +15,7 @@ require_once 'includes/header.php';
     <!-- filtres -->
     <form>
 
-        <!-- Prix maximum -->
-        <label for="prix-max">Prix maximum :</label>
-        <input type="number" id="prix-max" name="prix-max">
-
-
+       
         <!-- Fourchette de prix -->
         <label for="prix-min">Prix minimum :</label>
         <input type="number" id="prix-min" name="prix-min">
