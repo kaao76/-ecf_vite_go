@@ -11,16 +11,26 @@
         <p>
             Traiteur depuis 25 ans
         </p>
+        <p>
+        Ouvert du lundi au samedi de 9h00 à 18h00.
+        Fermé le dimanche.
+    </p>
 
-        <nav>
+    <p> Contact: 0628900807
 
-            <a href="../Html/index.php">Accueil</a>
-            <a href="../Html/menus.php">Nos menus</a>
-            <a href="../Html/contact.php">Contact</a>
-            <a href="../Html/connexion.php">Connexion</a>
-            <a href="../Html/inscription.php">Inscription</a>
+    </p>
 
-        </nav>
+    <p> Email : contact@viteetgourmand.fr</p>
+
+    
+    </p>
+
+    <nav>
+        <a href="mentions-legales.php">Mentions légales</a>
+        <a href="cgv.php">CGV</a>
+    </nav>
+
+       
 
         <p>
             © 2025 Vite & Gourmand. Tous droits réservés.

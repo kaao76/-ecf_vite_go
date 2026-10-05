@@ -216,7 +216,6 @@ require_once 'includes/header.php';
 
     <h3>Leur confiance, notre plus belle récompense</h3>
 
-
     <article>
 
 
