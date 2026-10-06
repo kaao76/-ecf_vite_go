@@ -174,6 +174,11 @@ Etape 9 Gestion, contruire les fonctionnalités permettant aux utilisateurs auto
 -donc par prix minimum seul
 -par prix maximum seul--par les deux en meme temps
 
+## css de menus.php presque fini 
+
+### ja passe à la page detail_menu.php
+
+creation des insert into dans data.sql et phpmyadmin.
 
 
 

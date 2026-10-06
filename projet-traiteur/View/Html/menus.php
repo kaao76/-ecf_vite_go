@@ -140,7 +140,7 @@ require_once 'includes/header.php';
         </div>
 
 
-        <a href="#" class="menu-bouton"> Voir détails →</a>
+        <a href="menu-details.php?id=1" class="menu-bouton"> Voir détails →</a>
         </div>
     </article>
 
@@ -183,7 +183,7 @@ require_once 'includes/header.php';
 
                     </div>
 
-        <a href="#" class="menu-bouton"> Voir détails →</a>
+        <a href="menu-details.php?id=2" class="menu-bouton"> Voir détails →</a>
                 </div>
     </article>
 
@@ -225,7 +225,7 @@ require_once 'includes/header.php';
 
                     </div>
 
-        <a href="#" class="menu-bouton">  Voir détails →</a>
+        <a href="menu-details.php?id=3" class="menu-bouton">  Voir détails →</a>
                 </div>
     </article>
         </div>
