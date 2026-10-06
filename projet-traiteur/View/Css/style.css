@@ -811,9 +811,7 @@ main h2 {
    POURQUOI CHOISIR
    ========================================================= */
 
-/* =========================================================
-   POURQUOI CHOISIR
-   ========================================================= */
+
 
 .pourquoi {
     position: relative;
@@ -1053,5 +1051,486 @@ main h2 {
 
     .pourquoi-decoration {
         display: none;
+    }
+}
+
+/* =========================================================
+   PAGE DÉTAIL D'UN MENU
+   ========================================================= */
+
+.page-menu-details {
+    background-color: #f8f3e8;
+    padding: 20px 5% 40px;
+        color: #171717;
+}
+
+
+/* =========================================================
+   FIL D'ARIANE
+   ========================================================= */
+
+.page-menu-details .fil-ariane {
+    max-width: 1200px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #8a8177;
+}
+
+.page-menu-details .fil-ariane span:first-child {
+    color: #c5a45a;
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   BLOC PRINCIPAL : GALERIE + INFORMATIONS
+   ========================================================= */
+
+.page-menu-details .menu-details-principal {
+    max-width: 1200px;
+    margin: 0 auto 45px;
+    display: grid;
+    grid-template-columns: 52% 48%;
+    gap: 40px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   GALERIE
+   ========================================================= */
+
+.page-menu-details .menu-details-galerie {
+    min-width: 0;
+}
+
+.page-menu-details .menu-image-principale {
+    width: 100%;
+    height: 265px;
+    background-color: #eee2d0;
+    border-radius: 5px;
+    border: 1px solid #dfd2bc;
+}
+
+
+/* Petites images */
+
+.page-menu-details .menu-galerie-vignettes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1.15fr;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.page-menu-details .menu-vignette {
+    height: 70px;
+    background-color: #eee2d0;
+    border: 1px solid #dfd2bc;
+    border-radius: 5px;
+}
+
+.page-menu-details .menu-galerie-lien {
+    height: 70px;
+    background-color: #eee2d0;
+    border-radius: 5px;
+    border: 1px solid #dfd2bc;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    color: #7a1735;
+    font-size: 12px;
+}
+
+.page-menu-details .menu-galerie-lien span:first-child {
+    font-size: 20px;
+    color: #c5a45a;
+}
+
+.page-menu-details .menu-galerie-lien strong {
+    font-size: 16px;
+    color: #7a1735;
+}
+
+
+/* =========================================================
+   CONTENU À DROITE
+   ========================================================= */
+
+.page-menu-details .menu-details-contenu {
+    padding-top: 0;
+}
+
+.page-menu-details .menu-details-label {
+    margin: 0 0 5px;
+    color: #b08b45;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.page-menu-details .menu-details-contenu h1 {
+    margin: 0;
+    color: #7a1735;
+    font-family: Georgia, serif;
+    font-size: 38px;
+    line-height: 1.15;
+}
+
+.page-menu-details .menu-details-slogan {
+    margin: 5px 0 10px;
+    color: #a98255;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.page-menu-details .menu-details-description {
+    margin: 0 0 18px;
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   INFORMATIONS
+   ========================================================= */
+
+.page-menu-details .menu-details-informations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 0;
+}
+
+.page-menu-details .menu-info-item {
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    border-bottom: 1px solid #e4d9c8;
+}
+
+.page-menu-details .menu-info-item:nth-child(5) {
+    grid-column: 1;
+}
+
+.page-menu-details .menu-info-icone {
+    width: 28px;
+    flex-shrink: 0;
+
+    color: #b08b45;
+    font-size: 25px;
+    text-align: center;
+}
+
+.page-menu-details .menu-info-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.page-menu-details .menu-info-item span:not(.menu-info-icone) {
+    font-size: 12px;
+    color: #555555;
+}
+
+.page-menu-details .menu-info-item strong {
+    color: #333333;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+
+/* =========================================================
+   BOUTON COMMANDER
+   ========================================================= */
+
+.page-menu-details .menu-details-action {
+    margin-top: 20px;
+}
+
+.page-menu-details .menu-details-action .bouton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-width: 235px;
+    padding: 11px 24px;
+
+    background-color: #7a1735;
+    color: #ffffff;
+
+    text-decoration: none;
+    border-radius: 25px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    transition: background-color 0.3s ease;
+}
+
+.page-menu-details .menu-details-action .bouton:hover {
+    background-color: #5f1129;
+}
+
+
+/* =========================================================
+   COMPOSITION
+   ========================================================= */
+
+.page-menu-details .menu-composition {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+}
+
+
+/* Titre avec lignes dorées */
+
+.page-menu-details .menu-section-titre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+.page-menu-details .menu-section-titre span {
+    width: 60px;
+    height: 1px;
+    background-color: #c5a45a;
+}
+
+.page-menu-details .menu-section-titre h2 {
+    margin: 0;
+
+    color: #7a1735;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    white-space: nowrap;
+}
+
+
+/* Trois plats */
+
+.page-menu-details .menu-plats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    background-color: #fffdf9;
+    border: 1px solid #e5d8c5;
+    border-radius: 6px;
+}
+
+.page-menu-details .menu-plat {
+    padding: 25px 28px;
+    min-height: 150px;
+}
+
+.page-menu-details .menu-plat + .menu-plat {
+    border-left: 1px solid #dfd1bd;
+}
+
+.page-menu-details .menu-plat-icone {
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 8px;
+
+    border: 2px solid #d8c5a4;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #b08b45;
+    font-size: 21px;
+}
+
+.page-menu-details .menu-plat h3 {
+    margin: 0 0 12px;
+
+    color: #7a1735;
+    font-family: Georgia, serif;
+    font-size: 17px;
+}
+
+.page-menu-details .menu-plat h4 {
+    margin: 0 0 7px;
+
+    color: #333333;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.page-menu-details .menu-plat p {
+    margin: 0;
+
+    color: #777777;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ALLERGÈNES + CONDITIONS
+   ========================================================= */
+
+.page-menu-details .menu-details-bas {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: #fffdf9;
+    border: 1px solid #e5d8c5;
+    border-radius: 6px;
+}
+
+
+/* Allergènes */
+
+.page-menu-details .menu-allergenes {
+    display: flex;
+    gap: 15px;
+    padding: 20px 28px;
+    align-items: flex-start;
+}
+
+.page-menu-details .menu-allergenes h3,
+.page-menu-details .menu-conditions h3 {
+    margin: 0 0 8px;
+
+    color: #7a1735;
+    font-family: Georgia, serif;
+    font-size: 15px;
+}
+
+.page-menu-details .menu-allergenes p {
+    margin: 0;
+
+    color: #777777;
+    font-size: 12px;
+}
+
+
+/* Conditions */
+
+.page-menu-details .menu-conditions {
+    display: flex;
+    gap: 15px;
+    padding: 20px 28px;
+
+    border-left: 1px solid #c5a45a;
+}
+
+.page-menu-details .menu-bas-icone {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border: 2px solid #d8c5a4;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #b08b45;
+    font-weight: bold;
+}
+
+.page-menu-details .menu-conditions ul {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.page-menu-details .menu-conditions li {
+    margin-bottom: 5px;
+
+    color: #777777;
+    font-size: 11px;
+}
+
+.page-menu-details .menu-conditions li::before {
+    content: "✓";
+    margin-right: 8px;
+
+    color: #b08b45;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .page-menu-details .menu-details-principal {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .page-menu-details .menu-plats {
+        grid-template-columns: 1fr;
+    }
+
+    .page-menu-details .menu-plat + .menu-plat {
+        border-left: none;
+        border-top: 1px solid #dfd1bd;
+    }
+
+    .page-menu-details .menu-details-bas {
+        grid-template-columns: 1fr;
+    }
+
+    .page-menu-details .menu-conditions {
+        border-left: none;
+        border-top: 1px solid #c5a45a;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .page-menu-details {
+        padding: 15px 4% 30px;
+    }
+
+    .page-menu-details .menu-details-contenu h1 {
+        font-size: 32px;
+    }
+
+    .page-menu-details .menu-details-informations {
+        grid-template-columns: 1fr;
+    }
+
+    .page-menu-details .menu-galerie-vignettes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-menu-details .menu-section-titre h2 {
+        font-size: 21px;
+    }
+
+    .page-menu-details .menu-section-titre span {
+        width: 35px;
     }
 }

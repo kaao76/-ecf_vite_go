@@ -4,65 +4,265 @@ require_once 'includes/header.php';
 
 <main class="page-menu-details">
 
-    <section class="menu-details">
+    <!-- Fil d'Ariane -->
+    <div class="fil-ariane">
+        <span>⌂</span>
+        <span>Menus</span>
+        <span>›</span>
+        <span>Menu Classique</span>
+    </div>
 
-        <div class="menu-details-intro">
-            <p class="menus-decoration">✦</p>
-            <h1>Menu Classique</h1>
-            <p class="menu-details-description">
-                Des saveurs fines et équilibrées pour un moment raffiné.
-            </p>
+
+    <!-- Présentation principale -->
+    <section class="menu-details-principal">
+
+        <!-- GAUCHE : GALERIE -->
+        <div class="menu-details-galerie">
+
+            <div class="menu-image-principale">
+                <!-- Image principale à ajouter plus tard -->
+            </div>
+
+            <div class="menu-galerie-vignettes">
+
+                <div class="menu-vignette">
+                    <!-- Image -->
+                </div>
+
+                <div class="menu-vignette">
+                    <!-- Image -->
+                </div>
+
+                <div class="menu-vignette">
+                    <!-- Image -->
+                </div>
+
+                <div class="menu-galerie-lien">
+                    <span>▧</span>
+                    <span>Voir toute la galerie</span>
+                    <strong>→</strong>
+                </div>
+
+            </div>
+
         </div>
 
-        <section class="menu-details-informations">
 
-            <h2>Informations du menu</h2>
+        <!-- DROITE : INFORMATIONS -->
+        <div class="menu-details-contenu">
 
-            <p><strong>Thème :</strong> Classique</p>
-            <p><strong>Régime :</strong> Classique</p>
-            <p><strong>Minimum :</strong> 4 personnes</p>
-            <p><strong>Prix :</strong> 32 € / personne</p>
-            <p><strong>Stock disponible :</strong> 20</p>
+            <p class="menu-details-label">MENU</p>
 
-        </section>
+            <h1>Menu Classique</h1>
 
-        <section class="menu-composition">
+            <p class="menu-details-slogan">
+                Des saveurs fines et équilibrées pour un moment raffiné.
+            </p>
+
+            <p class="menu-details-description">
+                Des saveurs fines et équilibrées pour un moment raffiné.
+                Découvrez une sélection de produits soigneusement choisis
+                pour un moment gourmand et élégant.
+            </p>
+
+
+            <!-- Informations -->
+            <div class="menu-details-informations">
+
+                <div class="menu-info-item">
+                    <span class="menu-info-icone">♨</span>
+
+                    <div>
+                        <span>Thème</span>
+                        <strong>Classique</strong>
+                    </div>
+                </div>
+
+
+                <div class="menu-info-item">
+                    <span class="menu-info-icone">♧</span>
+
+                    <div>
+                        <span>Régime</span>
+                        <strong>Classique</strong>
+                    </div>
+                </div>
+
+
+                <div class="menu-info-item">
+                    <span class="menu-info-icone">♧</span>
+
+                    <div>
+                        <span>Min. personnes</span>
+                        <strong>4</strong>
+                    </div>
+                </div>
+
+
+                <div class="menu-info-item">
+                    <span class="menu-info-icone">€</span>
+
+                    <div>
+                        <span>Prix (par personne)</span>
+                        <strong>32 € / pers.</strong>
+                    </div>
+                </div>
+
+
+                <div class="menu-info-item">
+                    <span class="menu-info-icone">□</span>
+
+                    <div>
+                        <span>Stock</span>
+                        <strong>20 disponibles</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Bouton -->
+            <div class="menu-details-action">
+
+                <a href="#" class="bouton">
+                    🛒 Commander ce menu
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMPOSITION -->
+    <section class="menu-composition">
+
+        <div class="menu-section-titre">
+
+            <span></span>
 
             <h2>Composition du menu</h2>
 
-            <div class="menu-plat">
+            <span></span>
+
+        </div>
+
+
+        <div class="menu-plats">
+
+            <!-- Entrée -->
+            <article class="menu-plat">
+
+                <div class="menu-plat-icone">
+                    ♨
+                </div>
+
                 <h3>Entrée</h3>
-                <p>Salade de chèvre chaud, noix et miel</p>
-                <p>Allergènes : Lait, fruits à coque</p>
-            </div>
 
-            <div class="menu-plat">
+                <h4>
+                    Salade de chèvre chaud, noix et miel
+                </h4>
+
+                <p>
+                    Salade de chèvre chaud accompagnée de noix
+                    et de miel.
+                </p>
+
+            </article>
+
+
+            <!-- Plat -->
+            <article class="menu-plat">
+
+                <div class="menu-plat-icone">
+                    ◉
+                </div>
+
                 <h3>Plat</h3>
-                <p>Suprême de poulet rôti, sauce aux champignons</p>
-                <p>Allergènes : Lait</p>
-            </div>
 
-            <div class="menu-plat">
+                <h4>
+                    Suprême de poulet rôti,
+                    sauce aux champignons
+                </h4>
+
+                <p>
+                    Suprême de poulet rôti accompagné
+                    d'une sauce aux champignons.
+                </p>
+
+            </article>
+
+
+            <!-- Dessert -->
+            <article class="menu-plat">
+
+                <div class="menu-plat-icone">
+                    ♨
+                </div>
+
                 <h3>Dessert</h3>
-                <p>Tarte fine aux pommes, caramel beurre salé</p>
-                <p>Allergènes : Gluten, lait</p>
+
+                <h4>
+                    Tarte fine aux pommes,
+                    caramel beurre salé
+                </h4>
+
+                <p>
+                    Tarte fine aux pommes accompagnée
+                    de caramel au beurre salé.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ALLERGÈNES + CONDITIONS -->
+    <section class="menu-details-bas">
+
+        <!-- Allergènes -->
+        <div class="menu-allergenes">
+
+            <div class="menu-bas-icone">
+                !
             </div>
 
-        </section>
+            <div>
 
-        <section class="menu-conditions">
+                <h3>Allergènes</h3>
 
-            <h2>Conditions du menu</h2>
+                <p>
+                    Lait, fruits à coque, gluten.
+                </p>
 
-            <p>
-                Minimum 4 personnes. Commande au moins 48 h à l’avance.
-                Sous réserve de disponibilité des produits.
-            </p>
+            </div>
 
-        </section>
+        </div>
 
-        <div class="menu-details-action">
-            <a href="#" class="bouton">Commander ce menu</a>
+
+        <!-- Conditions -->
+        <div class="menu-conditions">
+
+            <div class="menu-bas-icone">
+                ▤
+            </div>
+
+            <div>
+
+                <h3>Conditions du menu</h3>
+
+                <ul>
+                    <li>Minimum 4 personnes</li>
+                    <li>Commande au moins 48 h à l'avance</li>
+                    <li>Sous réserve de disponibilité des produits</li>
+                </ul>
+
+            </div>
+
         </div>
 
     </section>
