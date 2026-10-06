@@ -34,4 +34,99 @@ class Menu
     $this->id_theme = $id_theme;
 }
 
+// GETTERS
+
+public function getIdMenu()
+{
+    return $this->id_menu;
+}
+
+public function getTitre()
+{
+    return $this->titre;
+}
+
+public function getDescription()
+{
+    return $this->description;
+}
+
+public function getNombrePersonnesMin()
+{
+    return $this->nombre_personnes_min;
+}
+
+public function getPrixParPersonne()
+{
+    return $this->prix_par_personne;
+}
+
+public function getConditions()
+{
+    return $this->conditions;
+}
+
+public function getStockDisponible()
+{
+    return $this->stock_disponible;
+}
+
+public function getIdRegime()
+{
+    return $this->id_regime;
+}
+
+public function getIdTheme()
+{
+    return $this->id_theme;
+}
+
+
+// SETTERS
+
+public function setIdMenu($id_menu)
+{
+    $this->id_menu = $id_menu;
+}
+
+public function setTitre($titre)
+{
+    $this->titre = $titre;
+}
+
+public function setDescription($description)
+{
+    $this->description = $description;
+}
+
+public function setNombrePersonnesMin($nombre_personnes_min)
+{
+    $this->nombre_personnes_min = $nombre_personnes_min;
+}
+
+public function setPrixParPersonne($prix_par_personne)
+{
+    $this->prix_par_personne = $prix_par_personne;
+}
+
+public function setConditions($conditions)
+{
+    $this->conditions = $conditions;
+}
+
+public function setStockDisponible($stock_disponible)
+{
+    $this->stock_disponible = $stock_disponible;
+}
+
+public function setIdRegime($id_regime)
+{
+    $this->id_regime = $id_regime;
+}
+
+public function setIdTheme($id_theme)
+{
+    $this->id_theme = $id_theme;
+}
+
 }
