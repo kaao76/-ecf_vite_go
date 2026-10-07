@@ -1,17 +1,35 @@
 <?php
 
 require_once 'entity/Menu.php';
+require_once 'config/database.php';
+
+$id_menu = 1;
+
+$requete = $pdo->prepare("
+    SELECT *
+    FROM Menu
+    WHERE id_menu = :id_menu
+");
+
+$requete->execute([
+    'id_menu' => $id_menu
+]);
+
+$donnees = $requete->fetch();
 
 $menu = new Menu(
-    1,
-    "Menu Classique",
-    "Des saveurs fines et équilibrées pour un moment raffiné.",
-    4,
-    32.00,
-    "Minimum 4 personnes. Commande au moins 48 h à l’avance.",
-    20,
-    1,
-    1
+    $donnees['id_menu'],
+    $donnees['titre'],
+    $donnees['description'],
+    $donnees['nombre_personnes_min'],
+    $donnees['prix_par_personne'],
+    $donnees['conditions'],
+    $donnees['stock_disponible'],
+    $donnees['id_regime'],
+    $donnees['id_theme']
 );
 
-echo $menu->getTitre();
+echo $menu->getTitre() . "<br>";
+echo $menu->getNombrePersonnesMin() . " personnes minimum<br>";
+echo $menu->getPrixParPersonne() . " € / personne<br>";
+echo $menu->getStockDisponible() . " disponibles<br>";
