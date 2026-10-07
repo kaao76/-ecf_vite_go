@@ -1,5 +1,38 @@
 <?php
 require_once 'includes/header.php';
+
+$id_menu = $_GET['id_menu'];
+
+require_once '../../config/database.php';
+require_once '../../entity/Menu.php';
+
+$requete = $pdo->prepare("
+    SELECT *
+    FROM Menu
+    WHERE id_menu = :id_menu
+");
+
+$requete->execute([
+    'id_menu' => $id_menu
+]);
+
+$donnees = $requete->fetch();
+
+
+$menu = new Menu(
+    $donnees['id_menu'],
+    $donnees['titre'],
+    $donnees['description'],
+    $donnees['nombre_personnes_min'],
+    $donnees['prix_par_personne'],
+    $donnees['conditions'],
+    $donnees['stock_disponible'],
+    $donnees['id_regime'],
+    $donnees['id_theme']
+);
+
+
+
 ?>
 
 <main class="page-menu-details">
