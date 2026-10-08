@@ -86,16 +86,13 @@ $menu = new Menu(
 
             <p class="menu-details-label">MENU</p>
 
-            <h1>Menu Classique</h1>
+            <h1><?= $menu->getTitre(); ?></h1>
 
-            <p class="menu-details-slogan">
-                Des saveurs fines et équilibrées pour un moment raffiné.
-            </p>
+
 
             <p class="menu-details-description">
-                Des saveurs fines et équilibrées pour un moment raffiné.
-                Découvrez une sélection de produits soigneusement choisis
-                pour un moment gourmand et élégant.
+               <?=  $menu->getDescription() 
+               ?>
             </p>
 
 
@@ -127,7 +124,7 @@ $menu = new Menu(
 
                     <div>
                         <span>Min. personnes</span>
-                        <strong>4</strong>
+                        <strong><?= $menu->getNombrePersonnesMin(); ?></strong>
                     </div>
                 </div>
 
@@ -137,7 +134,7 @@ $menu = new Menu(
 
                     <div>
                         <span>Prix (par personne)</span>
-                        <strong>32 € / pers.</strong>
+                        <strong><?= $menu->getPrixParPersonne(); ?> € / pers.</strong>
                     </div>
                 </div>
 
@@ -147,7 +144,7 @@ $menu = new Menu(
 
                     <div>
                         <span>Stock</span>
-                        <strong>20 disponibles</strong>
+                        <strong><?= $menu->getStockDisponible(); ?> disponibles</strong>
                     </div>
                 </div>
 
@@ -288,11 +285,7 @@ $menu = new Menu(
 
                 <h3>Conditions du menu</h3>
 
-                <ul>
-                    <li>Minimum 4 personnes</li>
-                    <li>Commande au moins 48 h à l'avance</li>
-                    <li>Sous réserve de disponibilité des produits</li>
-                </ul>
+                <p><?= $menu->getConditions(); ?></p>
 
             </div>
 
