@@ -44,7 +44,7 @@ require_once 'includes/header.php';
     <div class="menus-cartes">
 
         <article class="menu">
-            <img src="../../images/menu_classique.jpg" alt="Menu Classique">
+            <img src="../images/menu_classique.jpg" alt="Menu Classique">
 
             <h3>Menu Classique</h3>
 

@@ -127,11 +127,11 @@ main h2 {
 ========================= */
 
 .hero {
-    min-height: 500px;
+    min-height: 300px;
 
     padding: 70px 80px;
 
-    background-image: url('../../images/image_hero.png');
+    background-image: url('../../images/decoration/image_hero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -7,9 +7,14 @@ require_once '../../config/database.php';
 require_once '../../entity/Menu.php';
 
 $requete = $pdo->prepare("
-    SELECT *
+    SELECT 
+        Menu.*,
+        Theme.libelle AS theme,
+        Regime.libelle AS regime
     FROM Menu
-    WHERE id_menu = :id_menu
+    INNER JOIN Theme ON Menu.id_theme = Theme.id_theme
+    INNER JOIN Regime ON Menu.id_regime = Regime.id_regime
+    WHERE Menu.id_menu = :id_menu
 ");
 
 $requete->execute([
@@ -31,7 +36,38 @@ $menu = new Menu(
     $donnees['id_theme']
 );
 
+$requetePlats = $pdo->prepare("
+    SELECT Plat.*
+    FROM MenuPlat
+    INNER JOIN Plat ON MenuPlat.id_plat = Plat.id_plat
+    WHERE MenuPlat.id_menu = :id_menu
+    ORDER BY FIELD(Plat.type_plat, 'Entrée', 'Plat', 'Dessert')
+");
 
+$requetePlats->execute([
+    'id_menu' => $id_menu
+]);
+
+$plats = $requetePlats->fetchAll();
+
+$requeteAllergenes = $pdo->prepare("
+    SELECT DISTINCT Allergene.libelle
+    FROM MenuPlat
+    INNER JOIN Plat
+        ON MenuPlat.id_plat = Plat.id_plat
+    INNER JOIN PlatAllergene
+        ON Plat.id_plat = PlatAllergene.id_plat
+    INNER JOIN Allergene
+        ON PlatAllergene.id_allergene = Allergene.id_allergene
+    WHERE MenuPlat.id_menu = :id_menu
+    ORDER BY Allergene.libelle
+");
+
+$requeteAllergenes->execute([
+    'id_menu' => $id_menu
+]);
+
+$allergenes = $requeteAllergenes->fetchAll();
 
 ?>
 
@@ -91,8 +127,8 @@ $menu = new Menu(
 
 
             <p class="menu-details-description">
-               <?=  $menu->getDescription() 
-               ?>
+                <?= $menu->getDescription()
+                ?>
             </p>
 
 
@@ -104,7 +140,7 @@ $menu = new Menu(
 
                     <div>
                         <span>Thème</span>
-                        <strong>Classique</strong>
+                        <strong><?= $donnees['theme']; ?></strong>
                     </div>
                 </div>
 
@@ -114,7 +150,7 @@ $menu = new Menu(
 
                     <div>
                         <span>Régime</span>
-                        <strong>Classique</strong>
+                        <strong><?= $donnees['regime']; ?></strong>
                     </div>
                 </div>
 
@@ -182,69 +218,27 @@ $menu = new Menu(
 
         <div class="menu-plats">
 
-            <!-- Entrée -->
-            <article class="menu-plat">
+            <?php foreach ($plats as $plat) : ?>
 
-                <div class="menu-plat-icone">
-                    ♨
-                </div>
+                <article class="menu-plat">
 
-                <h3>Entrée</h3>
+                    <div class="menu-plat-icone">
+                        ♨
+                    </div>
 
-                <h4>
-                    Salade de chèvre chaud, noix et miel
-                </h4>
+                    <h3><?= htmlspecialchars($plat['type_plat']); ?></h3>
 
-                <p>
-                    Salade de chèvre chaud accompagnée de noix
-                    et de miel.
-                </p>
+                    <h4>
+                        <?= htmlspecialchars($plat['titre']); ?>
+                    </h4>
 
-            </article>
+                    <p>
+                        <?= htmlspecialchars($plat['description']); ?>
+                    </p>
 
+                </article>
 
-            <!-- Plat -->
-            <article class="menu-plat">
-
-                <div class="menu-plat-icone">
-                    ◉
-                </div>
-
-                <h3>Plat</h3>
-
-                <h4>
-                    Suprême de poulet rôti,
-                    sauce aux champignons
-                </h4>
-
-                <p>
-                    Suprême de poulet rôti accompagné
-                    d'une sauce aux champignons.
-                </p>
-
-            </article>
-
-
-            <!-- Dessert -->
-            <article class="menu-plat">
-
-                <div class="menu-plat-icone">
-                    ♨
-                </div>
-
-                <h3>Dessert</h3>
-
-                <h4>
-                    Tarte fine aux pommes,
-                    caramel beurre salé
-                </h4>
-
-                <p>
-                    Tarte fine aux pommes accompagnée
-                    de caramel au beurre salé.
-                </p>
-
-            </article>
+            <?php endforeach; ?>
 
         </div>
 
@@ -266,7 +260,9 @@ $menu = new Menu(
                 <h3>Allergènes</h3>
 
                 <p>
-                    Lait, fruits à coque, gluten.
+                    <?php foreach ($allergenes as $index => $allergene) : ?>
+                        <?= htmlspecialchars($allergene['libelle']); ?><?= $index < count($allergenes) - 1 ? ', ' : ''; ?>
+                    <?php endforeach; ?>
                 </p>
 
             </div>
