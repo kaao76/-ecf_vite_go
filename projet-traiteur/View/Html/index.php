@@ -44,7 +44,7 @@ require_once 'includes/header.php';
     <div class="menus-cartes">
 
         <article class="menu">
-            <img src="../images/menu_classique.jpg" alt="Menu Classique">
+            <img src="../../images/menus/menu_classique.jpg" alt="Menu Classique">
 
             <h3>Menu Classique</h3>
 
@@ -62,7 +62,7 @@ require_once 'includes/header.php';
 
 
         <article class="menu">
-            <img src="../../images/menu_gourmand.jpg" alt="Menu Gourmand">
+            <img src="../../images/buffets/buffet_gourmand.jpg" alt="Menu Gourmand">
 
             <h3>Menu Gourmand</h3>
 
@@ -81,7 +81,7 @@ require_once 'includes/header.php';
 
 
         <article class="menu">
-            <img src="../../images/menu_prestige.jpg" alt="Menu Prestige">
+            <img src="../../images/menus/m_prestige_menusphp.png" alt="Menu Prestige">
 
             <h3>Menu Prestige</h3>
 
@@ -100,7 +100,7 @@ require_once 'includes/header.php';
 
 
         <article class="menu">
-            <img src="../../images/menu_sur_mesure.jpg" alt="Menu Sur-Mesure">
+            <img src="../../images/buffets/buffet_prestige.jpg" alt="Menu Sur-Mesure">
 
             <h3>Menu Sur-Mesure</h3>
 
@@ -121,7 +121,7 @@ require_once 'includes/header.php';
 <section class="histoire">
     <!-- photo du chef -->
     <div class="histoire-image">
-        <img src="../../images/chef_cooking2.png" alt="Chef Vite & Gourmand">
+        <img src="../../images/chef/chef_cooking2.png" alt="Chef Vite & Gourmand">
     </div>
 
 
@@ -174,7 +174,7 @@ require_once 'includes/header.php';
 
 
         <article class="evenement">
-            <img src="../../images/event_mariage.jpg" alt="Événement Mariage">
+            <img src="../../images/evenements/event_mariage.jpg" alt="Événement Mariage">
 
             <h3>Mariage</h3>
 
@@ -182,7 +182,7 @@ require_once 'includes/header.php';
 
 
         <article class="evenement">
-            <img src="../../images/event_corporate.jpg" alt="Événement Entreprise">
+            <img src="../../images/evenements/event_corporate.jpg" alt="Événement Entreprise">
 
             <h3>Entreprise</h3>
 
@@ -190,7 +190,7 @@ require_once 'includes/header.php';
 
 
         <article class="evenement">
-            <img src="../../images/event_birthday.jpg" alt="Événement Anniversaire">
+            <img src="../../images/evenements/event_birthday.jpg" alt="Événement Anniversaire">
 
             <h3>Anniversaire</h3>
 
@@ -198,7 +198,7 @@ require_once 'includes/header.php';
 
 
         <article class="evenement">
-            <img src="../../images/event_family.jpg" alt="Événement Fête de famille">
+            <img src="../../images/evenements/event_family.jpg" alt="Événement Fête de famille">
 
             <h3>Fête de famille</h3>
 
