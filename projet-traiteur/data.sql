@@ -145,3 +145,18 @@ VALUES
 (3, 6),
 (3, 7),
 (3, 5);
+
+
+ALTER TABLE Image
+ADD COLUMN id_plat INT NULL,
+ADD COLUMN id_menu INT NULL,
+ADD CONSTRAINT fk_image_plat
+    FOREIGN KEY (id_plat)
+    REFERENCES Plat(id_plat)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+ADD CONSTRAINT fk_image_menu
+    FOREIGN KEY (id_menu)
+    REFERENCES Menu(id_menu)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE;
