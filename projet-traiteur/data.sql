@@ -160,3 +160,72 @@ ADD CONSTRAINT fk_image_menu
     REFERENCES Menu(id_menu)
     ON DELETE CASCADE
     ON UPDATE CASCADE;
+
+
+
+INSERT INTO Image
+    (titre, url_image, type, texte_alternatif, actif, id_plat, id_menu)
+VALUES
+    (
+        'Salade de chèvre chaud',
+        'images/plats/salade_chevre_chaud.jpg',
+        'plat',
+        'Salade de chèvre chaud accompagnée de noix et de miel',
+        1,
+        1,
+        NULL
+    ),
+    (
+        'Suprême de poulet rôti',
+        'images/plats/plat_poulet.jpg',
+        'plat',
+        'Suprême de poulet rôti accompagné de sauce aux champignons',
+        1,
+        2,
+        NULL
+    ),
+    (
+        'Tarte fine aux pommes',
+        'images/plats/Dessert_tarte_aux_pommes.png',
+        'plat',
+        'Tarte fine aux pommes avec caramel au beurre salé',
+        1,
+        3,
+        NULL
+    ),
+    (
+        'Pavé de saumon rôti',
+        'images/plats/plat_saumon.jpg',
+        'plat',
+        'Pavé de saumon rôti accompagné de sauce citronnée',
+        1,
+        4,
+        NULL
+    ),
+    (
+        'Moelleux au chocolat',
+        'images/plats/dessert_moelleux_au_chocolat.jpg',
+        'plat',
+        'Moelleux au chocolat avec un cœur coulant',
+        1,
+        5,
+        NULL
+    ),
+    (
+        'Saumon fumé et blinis',
+        'images/plats/salade_saumon_blinis.png',
+        'plat',
+        'Saumon fumé servi avec une crème citronnée et des blinis',
+        1,
+        6,
+        NULL
+    ),
+    (
+        'Filet de bœuf aux morilles',
+        'images/plats/plat_boeuf.png',
+        'plat',
+        'Filet de bœuf accompagné de sauce aux morilles',
+        1,
+        7,
+        NULL
+    );
