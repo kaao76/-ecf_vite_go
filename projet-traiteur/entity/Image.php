@@ -33,4 +33,91 @@ class Image
         $this->id_plat = $id_plat;
         $this->id_menu = $id_menu;
     }
+
+    
+    // GETTERS
+
+    public function getIdImage()
+    {
+        return $this->id_image;
+    }
+
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    public function getUrlImage()
+    {
+        return $this->url_image;
+    }
+
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    public function getTexteAlternatif()
+    {
+        return $this->texte_alternatif;
+    }
+
+    public function getActif()
+    {
+        return $this->actif;
+    }
+
+    public function getIdPlat()
+    {
+        return $this->id_plat;
+    }
+
+    public function getIdMenu()
+    {
+        return $this->id_menu;
+    }
+
+    
+    // SETTERS
+
+    public function setIdImage($id_image)
+    {
+        $this->id_image = $id_image;
+    }
+
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+    }
+
+    public function setUrlImage($url_image)
+    {
+        $this->url_image = $url_image;
+    }
+
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    public function setTexteAlternatif($texte_alternatif)
+    {
+        $this->texte_alternatif = $texte_alternatif;
+    }
+
+    public function setActif($actif)
+    {
+        $this->actif = $actif;
+    }
+
+    public function setIdPlat($id_plat)
+    {
+        $this->id_plat = $id_plat;
+    }
+
+    public function setIdMenu($id_menu)
+    {
+        $this->id_menu = $id_menu;
+    }
+
 }
