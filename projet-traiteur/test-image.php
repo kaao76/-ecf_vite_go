@@ -16,4 +16,21 @@ $requete->execute([
     'id_image' => $id_image
 ]);
 
-$donnees = $requete->fetch();
+$donnees = $requete->fetch(); 
+
+
+$image = new Image(
+    $donnees['id_image'],
+    $donnees['titre'],
+    $donnees['url_image'],
+    $donnees['type'],
+    $donnees['texte_alternatif'],
+    $donnees['actif'],
+    $donnees['id_plat'],
+    $donnees['id_menu']
+);
+
+
+echo $image->getTitre() . "<br>";
+echo $image->getUrlImage() . "<br>";
+echo $image->getType() . "<br>";
