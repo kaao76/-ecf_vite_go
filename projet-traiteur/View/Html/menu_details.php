@@ -1,73 +1,7 @@
 <?php
+
+require_once __DIR__ . '/../../controller/MenuController.php';
 require_once 'includes/header.php';
-
-$id_menu = $_GET['id_menu'];
-
-require_once '../../config/database.php';
-require_once '../../entity/Menu.php';
-
-$requete = $pdo->prepare("
-    SELECT 
-        Menu.*,
-        Theme.libelle AS theme,
-        Regime.libelle AS regime
-    FROM Menu
-    INNER JOIN Theme ON Menu.id_theme = Theme.id_theme
-    INNER JOIN Regime ON Menu.id_regime = Regime.id_regime
-    WHERE Menu.id_menu = :id_menu
-");
-
-$requete->execute([
-    'id_menu' => $id_menu
-]);
-
-$donnees = $requete->fetch();
-
-
-$menu = new Menu(
-    $donnees['id_menu'],
-    $donnees['titre'],
-    $donnees['description'],
-    $donnees['nombre_personnes_min'],
-    $donnees['prix_par_personne'],
-    $donnees['conditions'],
-    $donnees['stock_disponible'],
-    $donnees['id_regime'],
-    $donnees['id_theme']
-);
-
-$requetePlats = $pdo->prepare("
-    SELECT Plat.*
-    FROM MenuPlat
-    INNER JOIN Plat ON MenuPlat.id_plat = Plat.id_plat
-    WHERE MenuPlat.id_menu = :id_menu
-    ORDER BY FIELD(Plat.type_plat, 'Entrée', 'Plat', 'Dessert')
-");
-
-$requetePlats->execute([
-    'id_menu' => $id_menu
-]);
-
-$plats = $requetePlats->fetchAll();
-
-$requeteAllergenes = $pdo->prepare("
-    SELECT DISTINCT Allergene.libelle
-    FROM MenuPlat
-    INNER JOIN Plat
-        ON MenuPlat.id_plat = Plat.id_plat
-    INNER JOIN PlatAllergene
-        ON Plat.id_plat = PlatAllergene.id_plat
-    INNER JOIN Allergene
-        ON PlatAllergene.id_allergene = Allergene.id_allergene
-    WHERE MenuPlat.id_menu = :id_menu
-    ORDER BY Allergene.libelle
-");
-
-$requeteAllergenes->execute([
-    'id_menu' => $id_menu
-]);
-
-$allergenes = $requeteAllergenes->fetchAll();
 
 ?>
 

@@ -62,7 +62,7 @@ require_once 'includes/header.php';
 
 
         <article class="menu">
-            <img src="../../images/buffets/buffet_gourmand.jpg" alt="Menu Gourmand">
+            <img src="../../images/menus/buffet_gourmand.jpg" alt="Menu Gourmand">
 
             <h3>Menu Gourmand</h3>
 
@@ -100,7 +100,7 @@ require_once 'includes/header.php';
 
 
         <article class="menu">
-            <img src="../../images/buffets/buffet_prestige.jpg" alt="Menu Sur-Mesure">
+            <img src="../../images/menus/menu_sur_mesure.jpg" alt="Menu Sur-Mesure">
 
             <h3>Menu Sur-Mesure</h3>
 

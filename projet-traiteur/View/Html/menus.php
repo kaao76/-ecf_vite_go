@@ -113,7 +113,7 @@ require_once 'includes/header.php';
                 data-regime="classique">
 
                 <div class="menu-image">
-                    <img src="../../images/menu_classique.jpg" alt="Menu Classique">
+                    <img src="../../images/menus/m_classique_menusphp.png" alt="Menu Classique">
                     <span class="menu-badge">
                         Classique
                     </span>
@@ -156,7 +156,7 @@ require_once 'includes/header.php';
                 data-regime="classique">
 
                 <div class="menu-image">
-                    <img src="../../images/menu_gourmand.jpg" alt="Menu Gourmand">
+                    <img src="../../images/menus/menu_gourmand.jpg" alt="Menu Gourmand">
                     <span class="menu-badge">
                         Gourmand
                     </span>
@@ -198,7 +198,7 @@ require_once 'includes/header.php';
                 data-regime="classique">
 
                 <div class="menu-image">
-                    <img src="../../images/menu_prestige.jpg" alt="Menu Prestige">
+                    <img src="../../images/menus/menu_prestige.jpg" alt="Menu Prestige">
                     <span class="menu-badge">
                         Prestige
                     </span>
