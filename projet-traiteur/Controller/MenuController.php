@@ -82,3 +82,28 @@ $requeteAllergenes->execute([
 ]);
 
 $allergenes = $requeteAllergenes->fetchAll(PDO::FETCH_ASSOC);
+
+
+ // Récupérer les images des plats du menu
+$requeteImages = $pdo->prepare("
+    SELECT
+        Image.id_image,
+        Image.titre,
+        Image.url_image,
+        Image.texte_alternatif,
+        Plat.type_plat
+    FROM MenuPlat
+    INNER JOIN Plat
+        ON MenuPlat.id_plat = Plat.id_plat
+    INNER JOIN Image
+        ON Plat.id_plat = Image.id_plat
+    WHERE MenuPlat.id_menu = :id_menu
+      AND Image.actif = 1
+    ORDER BY FIELD(Plat.type_plat, 'Entrée', 'Plat', 'Dessert')
+");
+
+$requeteImages->execute([
+    'id_menu' => $id_menu
+]);
+
+$images = $requeteImages->fetchAll(PDO::FETCH_ASSOC);
