@@ -162,7 +162,7 @@ require_once 'includes/header.php';
             <!-- Bouton -->
             <div class="menu-details-action">
 
-                <a href="#" class="bouton">
+                <a href="commande.php?id_menu=<?= (int) $menu->getIdMenu(); ?>" class="bouton">
                     🛒 Commander ce menu
                     <span>→</span>
                 </a>
