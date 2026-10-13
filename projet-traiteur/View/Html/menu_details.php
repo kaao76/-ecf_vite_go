@@ -19,36 +19,75 @@ require_once 'includes/header.php';
     <!-- Présentation principale -->
     <section class="menu-details-principal">
 
-        <!-- GAUCHE : GALERIE -->
-        <div class="menu-details-galerie">
+       
+<!-- GAUCHE : GALERIE -->
+<div class="menu-details-galerie">
 
-            <div class="menu-image-principale">
-                <!-- Image principale à ajouter plus tard -->
-            </div>
+    <?php if (!empty($images)) : ?> 
 
-            <div class="menu-galerie-vignettes">
+        <!-- Grande image -->
+        <div class="menu-image-principale">
 
-                <div class="menu-vignette">
-                    <!-- Image -->
-                </div>
+            <img
+                id="image-principale"
+                src="../../<?= htmlspecialchars($images[0]['url_image']); ?>"
+                alt="<?= htmlspecialchars($images[0]['texte_alternatif']); ?>"
+            >
 
-                <div class="menu-vignette">
-                    <!-- Image -->
-                </div>
+            <!-- Flèche précédente -->
+            <button type="button"
+                    class="galerie-fleche galerie-precedente"
+                    aria-label="Image précédente">
+                &#10094;
+            </button>
 
-                <div class="menu-vignette">
-                    <!-- Image -->
-                </div>
+            <!-- Flèche suivante -->
+            <button type="button"
+                    class="galerie-fleche galerie-suivante"
+                    aria-label="Image suivante">
+                &#10095;
+            </button>
 
-                <div class="menu-galerie-lien">
-                    <span>▧</span>
-                    <span>Voir toute la galerie</span>
-                    <strong>→</strong>
-                </div>
-
+            <!-- Indicateurs -->
+            <div class="galerie-indicateurs">
+                <?php foreach ($images as $index => $image) : ?>
+                    <button
+                        type="button"
+                        class="galerie-indicateur <?= $index === 0 ? 'actif' : ''; ?>"
+                        data-index="<?= $index; ?>"
+                        aria-label="Afficher l'image <?= $index + 1; ?>">
+                    </button>
+                <?php endforeach; ?>
             </div>
 
         </div>
+
+        <!-- Miniatures -->
+        <div class="menu-galerie-vignettes">
+
+            <?php foreach ($images as $index => $image) : ?>
+                <button
+                    type="button"
+                    class="menu-vignette <?= $index === 0 ? 'active' : ''; ?>"
+                    data-index="<?= $index; ?>"
+                    aria-label="Afficher <?= htmlspecialchars($image['titre']); ?>">
+
+                    <img
+                        src="../../<?= htmlspecialchars($image['url_image']); ?>"
+                        alt="<?= htmlspecialchars($image['texte_alternatif']); ?>"
+                    >
+                </button>
+            <?php endforeach; ?>
+
+        </div>
+
+    <?php else : ?>
+
+        <p>Aucune image disponible pour ce menu.</p>
+
+    <?php endif; ?>
+
+</div>
 
 
         <!-- DROITE : INFORMATIONS -->
@@ -225,4 +264,5 @@ require_once 'includes/header.php';
 
 </main>
 
+<script src="../Js/menu-details.js" defer></script>
 <?php require_once 'includes/footer.php'; ?>
