@@ -1088,15 +1088,16 @@ main h2 {
 /* =========================================================
    BLOC PRINCIPAL : GALERIE + INFORMATIONS
    ========================================================= */
-
+    
 .page-menu-details .menu-details-principal {
     max-width: 1200px;
     margin: 0 auto 45px;
     display: grid;
-    grid-template-columns: 52% 48%;
-    gap: 40px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 30px;
     align-items: start;
 }
+
 
 
 /* =========================================================
@@ -1116,21 +1117,54 @@ main h2 {
 }
 
 
+
+.menu-details-galerie {
+    width: 100%;
+    min-width: 0;
+}
+
+
+.page-menu-details .menu-image-principale {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #eee2d0;
+    border: 1px solid #dfd2bc;
+}
+
+.page-menu-details .menu-image-principale img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* Petites images */
 
 .page-menu-details .menu-galerie-vignettes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) 1.15fr;
-    gap: 12px;
-    margin-top: 15px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 12px;
 }
 
 .page-menu-details .menu-vignette {
-    height: 70px;
-    background-color: #eee2d0;
+    height: 80px;
+    min-width: 0;
+    overflow: hidden;
     border: 1px solid #dfd2bc;
     border-radius: 5px;
+    background-color: #eee2d0;
 }
+
+.page-menu-details .menu-vignette img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .page-menu-details .menu-galerie-lien {
     height: 70px;
@@ -1157,7 +1191,7 @@ main h2 {
 .page-menu-details .menu-galerie-lien strong {
     font-size: 16px;
     color: #7a1735;
-}
+} 
 
 
 /* =========================================================
@@ -1532,5 +1566,121 @@ main h2 {
 
     .page-menu-details .menu-section-titre span {
         width: 35px;
+    }
+}
+
+
+
+
+
+
+/*-----------------style nv -----------*/
+
+
+/* Galerie du menu */
+.menu-details-galerie {
+    width: 100%;
+    min-width: 0;
+}
+
+.menu-image-principale {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #eee1d0;
+}
+
+.menu-image-principale > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+/* Flèches */
+.galerie-fleche {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.galerie-precedente {
+    left: 15px;
+}
+
+.galerie-suivante {
+    right: 15px;
+}
+
+/* Petits indicateurs */
+.galerie-indicateurs {
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.galerie-indicateur {
+    width: 35px;
+    height: 4px;
+    padding: 0;
+    border: none;
+    background: rgba(255, 255, 255, 0.55);
+    cursor: pointer;
+}
+
+.galerie-indicateur.actif {
+    background: white;
+}
+
+/* Miniatures */
+.menu-galerie-vignettes {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+
+.menu-vignette {
+    flex: 0 0 110px;
+    height: 85px;
+    padding: 0;
+    overflow: hidden;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    background: #eee1d0;
+    cursor: pointer;
+}
+
+.menu-vignette.active {
+    border-color: #7a1735;
+}
+
+.menu-vignette img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Adaptation aux petits écrans */
+@media (max-width: 768px) {
+    .menu-image-principale {
+        height: 350px;
     }
 }
