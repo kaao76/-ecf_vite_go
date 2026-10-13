@@ -1083,6 +1083,19 @@ main h2 {
     color: #c5a45a;
     font-size: 17px;
 }
+/* Lien du fil d'Ariane */
+.page-menu-details .fil-ariane a {
+    color: #7a1735;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+/* Au passage de la souris */
+.page-menu-details .fil-ariane a:hover {
+    color: #c5a45a;
+    text-decoration: underline;
+}
 
 
 /* =========================================================

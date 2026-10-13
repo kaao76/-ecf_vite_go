@@ -7,13 +7,12 @@ require_once 'includes/header.php';
 
 <main class="page-menu-details">
 
-    <!-- Fil d'Ariane -->
-    <div class="fil-ariane">
-        <span>⌂</span>
-        <span>Menus</span>
-        <span>›</span>
-        <span>Menu Classique</span>
-    </div>
+  <!-- Fil d'Ariane -->
+<div class="fil-ariane">
+    <a href="menus.php">Menus</a>
+    <span>›</span>
+    <span><?= htmlspecialchars($menu->getTitre()); ?></span>
+</div>
 
 
     <!-- Présentation principale -->
