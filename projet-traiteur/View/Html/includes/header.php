@@ -7,6 +7,7 @@
 
     <title>Vite & Gourmand</title>
     <link rel="stylesheet" href="../Css/style.css">
+    <script src="../JS/header.js" defer></script>
 </head>
 
 <body>
@@ -21,8 +22,18 @@
 
             <p>Traiteur depuis 25 ans</p>
         </div>
+        <!-- Bouton du menu mobile -->
+        <button
+            type="button"
+            class="menu-hamburger"
+            aria-label="Ouvrir le menu de navigation"
+            aria-expanded="false"
+            aria-controls="navigation-principale">
+            ☰
+        </button>
 
-        <nav class="navbar">
+
+        <nav class="navbar" id="navigation-principale">
             <a href="../Html/index.php">Accueil</a>
             <a href="../Html/menus.php">Nos menus</a>
             <a href="../Html/contact.php">Contact</a>
@@ -32,4 +43,3 @@
 
     </header>
     <main>
-    
