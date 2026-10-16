@@ -1,4 +1,7 @@
-<?php require_once 'includes/header.php'; ?>
+<?php
+require_once __DIR__ . '/../../Controller/InscriptionController.php';
+require_once __DIR__ . '/includes/header.php';
+?>
 
 <!-- Contenu de la page inscription -->
 <div class="page-inscription">
@@ -158,7 +161,7 @@
                     <!-- Bouton d'inscription -->
                     <div class="auth-action">
 
-                        <button type="submit" class="bouton">
+                        <button type="submit" name="inscription" value="1"class="bouton">
                             Créer mon compte
                             <span aria-hidden="true">→</span>
                         </button>
