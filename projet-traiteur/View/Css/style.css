@@ -2120,3 +2120,71 @@ text-align: left;
     }
 
 }
+
+/* =========================
+   PAGE CGV
+========================= */
+
+.page-cgv {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px 20px;
+}
+
+.page-cgv h1 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    color: #7a1735;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-cgv h2 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    color: #7a1735;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.page-cgv p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   PAGE MENTIONS LÉGALES
+========================= */
+
+.page-mentions-legales {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px 20px;
+}
+
+.page-mentions-legales h1 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    color: #7a1735;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-mentions-legales h2 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    color: #7a1735;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.page-mentions-legales p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333333;
+    margin-bottom: 15px;
+}
