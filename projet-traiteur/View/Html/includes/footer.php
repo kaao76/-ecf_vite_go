@@ -22,9 +22,6 @@
 
     <p> Email : contact@viteetgourmand.fr</p>
 
-    
-    </p>
-
     <nav>
         <a href="mentions-legales.php">Mentions légales</a>
         <a href="cgv.php">CGV</a>
