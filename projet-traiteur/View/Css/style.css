@@ -29,6 +29,8 @@ body {
 
     border-bottom: 1px solid #e4dace;
     box-shadow: 0 2px 8px rgba(73, 21, 31, 0.08);
+    position: relative;
+z-index: 10;
 }
 
 
@@ -1696,4 +1698,425 @@ main h2 {
     .menu-image-principale {
         height: 350px;
     }
+}
+
+
+
+
+
+/* =========================
+   PAGE INSCRIPTION / CONNEXION
+   ========================= */
+
+
+   /* Conteneur principal des formulaires et de la photo */
+.authentification-conteneur {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    min-height: 650px;
+}
+
+/* Panneau photographique coulissant */
+.auth-panneau-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    transition: transform 0.7s ease-in-out;
+
+    background-image: url("../../images/decoration/image_connexion.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Photo déplacée vers la gauche */
+.authentification-conteneur.mode-connexion .auth-panneau-photo {
+    transform: translateX(-100%);
+}
+
+/* Formulaire d'inscription */
+.auth-formulaire-inscription {
+    width: 50%;
+    min-height: 650px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Formulaire de connexion */
+.auth-formulaire-connexion {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    min-height: 650px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Texte du panneau photographique */
+.auth-photo-contenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 85%;
+    text-align: center;
+    color: white;
+}
+
+
+/* Titre du panneau photographique */
+.auth-panneau-photo .auth-photo-contenu h2 {
+    color: #ffffff;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Description du panneau photographique */
+.auth-panneau-photo .auth-photo-contenu p {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Champs des formulaires inscription et connexion */
+.auth-champ {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+/* Labels des formulaires */
+.auth-champ label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+}
+
+/* Style des champs de saisie */
+.auth-champ input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d8cbb8;
+    border-radius: 6px;
+    background-color: #fffdf9;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Animation douce des champs */
+.auth-champ input {
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Champ sélectionné par l'utilisateur */
+.auth-champ input:focus {
+    outline: none;
+    border-color: #7a1735;
+    box-shadow: 0 0 0 3px rgba(197, 164, 90, 0.25);
+}
+
+/* Conditions générales et confidentialité */
+.auth-conditions {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.auth-conditions input[type="checkbox"] {
+    margin: 3px 0 0;
+    flex-shrink: 0;
+}
+
+.auth-conditions label {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333333;
+}
+
+/* Boutons des formulaires inscription et connexion */
+.page-inscription .auth-action .bouton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 14px 28px;
+
+    background-color: #7a1735;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+/* Effet au survol */
+.page-inscription .auth-action .bouton:hover {
+    background-color: #49151f;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   MESSAGES DU PANNEAU PHOTO
+   ========================= */
+
+/* Message visible lorsque la photo est à droite */
+.auth-photo-deja-compte {
+    display: block;
+}
+
+/* Message masqué lorsque la photo est à droite */
+.auth-photo-nouveau {
+    display: none;
+}
+
+/* Quand la photo glisse à gauche : afficher Sign Up */
+.authentification-conteneur.mode-connexion .auth-photo-deja-compte {
+    display: none;
+}
+
+.authentification-conteneur.mode-connexion .auth-photo-nouveau {
+    display: block;
+}
+/* Boutons Sign Up et Sign In */
+.auth-photo-contenu button {
+    margin-top: 20px;
+    padding: 12px 35px;
+
+    background-color: transparent;
+    color: #ffffff;
+
+    border: 2px solid #c5a45a;
+    border-radius: 25px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+/* Effet au survol */
+.auth-photo-contenu button:hover {
+    background-color: #c5a45a;
+    color: #49151f;
+}
+
+/* Titre du formulaire d'inscription */
+.auth-formulaire-inscription h1 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #7a1735;
+    margin-bottom: 15px;
+}
+
+/* Petit trait doré sous le titre */
+.auth-formulaire-inscription h1::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background-color: #c5a45a;
+    margin-top: 12px;
+    border-radius: 2px;
+}
+
+/* Description du formulaire d'inscription */
+.auth-formulaire-inscription > p {
+    color: #777777;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 18px;
+    margin-bottom: 30px;
+    max-width: 520px;
+}
+
+/* Titre du formulaire de connexion */
+.auth-formulaire-connexion h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #7a1735;
+    margin-bottom: 15px;
+}
+
+/* Trait doré sous le titre */
+.auth-formulaire-connexion h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    background-color: #c5a45a;
+    margin-top: 12px;
+    border-radius: 2px;
+}
+
+/* Description du formulaire de connexion */
+.auth-formulaire-connexion > p {
+    color: #777777;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 18px;
+    margin-bottom: 30px;
+    max-width: 520px;
+}
+/* Liens des formulaires d'authentification */
+.auth-formulaire-inscription a,
+.auth-formulaire-connexion a {
+    color: #7a1735;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Effet au survol des liens */
+.auth-formulaire-inscription a:hover,
+.auth-formulaire-connexion a:hover {
+    color: #c5a45a;
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE - MOBILE
+   ========================= */
+   /* Bouton hamburger masqué sur ordinateur */
+.menu-hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    /* Bouton Inscription dans le menu mobile */
+.navbar.menu-ouvert .btn-inscription {
+    width: auto;
+    padding: 12px 25px;
+    border-bottom: none;
+    align-self: flex-start;
+    text-align: center;
+}
+    /* Header adapté au mobile */
+.header {
+    padding: 15px 20px;
+}
+
+/* Afficher le bouton hamburger */
+.menu-hamburger {
+    display: block;
+    background: transparent;
+    border: none;
+    color: #7a1735;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Masquer la navigation classique */
+.navbar {
+    display: none;
+}
+
+/* Afficher la navigation quand le menu est ouvert */
+/* Navigation ouverte sur mobile */
+.navbar.menu-ouvert {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #f8e8cc;
+    padding: 20px;
+    gap: 20px;
+    z-index: 10;
+    align-items: flex-start;
+text-align: left;
+}
+
+/* Style des liens du menu mobile */
+.navbar.menu-ouvert a {
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(197, 164, 90, 0.35);
+}
+
+
+    /* Espacement de la section sur mobile */
+.authentification {
+    padding: 30px 15px;
+}
+
+    /* Conteneur principal */
+    .authentification-conteneur {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    /* Photographie au-dessus du formulaire */
+    .auth-panneau-photo {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 280px;
+        order: -1;
+        transform: none;
+        align-self: stretch;
+    }
+
+    /* Désactiver le coulissement sur mobile */
+    .authentification-conteneur.mode-connexion .auth-panneau-photo {
+        transform: none;
+    }
+
+    /* Formulaire d'inscription */
+    .auth-formulaire-inscription {
+        display: block;
+        width: 100%;
+        min-height: 0;
+        padding: 25px 20px;
+    }
+
+    /* Formulaire de connexion */
+    .auth-formulaire-connexion {
+        display: none;
+        position: static;
+        width: 100%;
+        min-height: 0;
+        padding: 25px 20px;
+    }
+
+    /* Afficher uniquement le formulaire de connexion */
+    .authentification-conteneur.mode-connexion .auth-formulaire-inscription {
+        display: none;
+    }
+
+    .authentification-conteneur.mode-connexion .auth-formulaire-connexion {
+        display: block;
+    }
+
 }
