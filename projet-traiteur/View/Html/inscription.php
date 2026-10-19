@@ -23,6 +23,13 @@ require_once __DIR__ . '/includes/header.php';
                 </p>
                 <!-- Formulaire d'inscription -->
                 <form action="" method="POST">
+                    <?php if (!empty($messageInscription)): ?>
+                        <p class="message-inscription <?= $messageInscription === "Votre compte a été créé avec succès !" ? 'message-succes' : 'message-erreur' ?>">
+                            <?= htmlspecialchars($messageInscription, ENT_QUOTES, 'UTF-8') ?>
+                        </p>
+                    <?php endif; ?>
+
+
 
                     <!-- Nom -->
                     <div class="auth-champ">
@@ -34,6 +41,7 @@ require_once __DIR__ . '/includes/header.php';
                             placeholder="Votre nom"
                             maxlength="50"
                             autocomplete="family-name"
+                            value="<?= htmlspecialchars($_POST['nom'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
                             required>
                     </div>
 
@@ -47,6 +55,7 @@ require_once __DIR__ . '/includes/header.php';
                             placeholder="Votre prénom"
                             maxlength="50"
                             autocomplete="given-name"
+                            value="<?= htmlspecialchars($_POST['prenom'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
                             required>
                     </div>
                     <!-- Téléphone -->
@@ -59,6 +68,7 @@ require_once __DIR__ . '/includes/header.php';
                             placeholder="06 12 34 56 78"
                             maxlength="20"
                             autocomplete="tel"
+                            value="<?= htmlspecialchars($_POST['telephone'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
                             required>
                     </div>
 
@@ -72,6 +82,7 @@ require_once __DIR__ . '/includes/header.php';
                             placeholder="exemple@domaine.fr"
                             maxlength="100"
                             autocomplete="email"
+                            value="<?= htmlspecialchars($_POST['email'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
                             required>
                     </div>
                     <!-- Adresse postale -->
@@ -84,6 +95,7 @@ require_once __DIR__ . '/includes/header.php';
                             placeholder="Votre adresse complète"
                             maxlength="255"
                             autocomplete="street-address"
+                            value="<?= htmlspecialchars($_POST['adresse'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
                             required>
                     </div>
 
@@ -97,6 +109,7 @@ require_once __DIR__ . '/includes/header.php';
                             placeholder="Votre ville"
                             maxlength="50"
                             autocomplete="address-level2"
+                            value="<?= htmlspecialchars($_POST['ville'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
                             required>
                     </div>
 
@@ -110,6 +123,7 @@ require_once __DIR__ . '/includes/header.php';
                             placeholder="Votre pays"
                             maxlength="50"
                             autocomplete="country-name"
+                            value="<?= htmlspecialchars($_POST['pays'] ?? '', ENT_QUOTES, 'UTF-8') ?>"
                             required>
                     </div>
                     <!-- Mot de passe -->
@@ -147,6 +161,7 @@ require_once __DIR__ . '/includes/header.php';
                             id="acceptation_conditions"
                             name="acceptation_conditions"
                             value="1"
+                            <?= isset($_POST['acceptation_conditions']) ? 'checked' : '' ?>
                             required>
 
                         <label for="acceptation_conditions">
@@ -161,7 +176,7 @@ require_once __DIR__ . '/includes/header.php';
                     <!-- Bouton d'inscription -->
                     <div class="auth-action">
 
-                        <button type="submit" name="inscription" value="1"class="bouton">
+                        <button type="submit" name="inscription" value="1" class="bouton">
                             Créer mon compte
                             <span aria-hidden="true">→</span>
                         </button>
@@ -176,109 +191,109 @@ require_once __DIR__ . '/includes/header.php';
 
             </div>
 
-       
 
-<!-- Panneau du formulaire de connexion -->
-<div class="auth-formulaire-connexion">
 
-    <h2>Heureux de vous retrouver</h2>
+            <!-- Panneau du formulaire de connexion -->
+            <div class="auth-formulaire-connexion">
 
-    <p>
-        Connectez-vous à votre compte Vite & Gourmand
-        pour retrouver vos commandes et vos menus.
-    </p>
-    <!-- Formulaire de connexion -->
-    <form action="" method="POST">
+                <h2>Heureux de vous retrouver</h2>
 
-        <!-- E-mail -->
-        <div class="auth-champ">
-            <label for="email-connexion">E-mail *</label>
-            <input
-                type="email"
-                id="email-connexion"
-                name="email"
-                placeholder="Votre adresse e-mail"
-                autocomplete="email"
-                required>
-        </div>
+                <p>
+                    Connectez-vous à votre compte Vite & Gourmand
+                    pour retrouver vos commandes et vos menus.
+                </p>
+                <!-- Formulaire de connexion -->
+                <form action="" method="POST">
 
-        <!-- Mot de passe -->
-        <div class="auth-champ">
-            <label for="mot-de-passe-connexion">Mot de passe *</label>
-            <input
-                type="password"
-                id="mot-de-passe-connexion"
-                name="mot_de_passe"
-                placeholder="Votre mot de passe"
-                autocomplete="current-password"
-                required>
-        </div>
-        <!-- Lien mot de passe oublié -->
-<p class="auth-mot-de-passe-oublie">
-    <a href="mot-de-passe-oublie.php">
-        Mot de passe oublié ?
-    </a>
-</p>
+                    <!-- E-mail -->
+                    <div class="auth-champ">
+                        <label for="email-connexion">E-mail *</label>
+                        <input
+                            type="email"
+                            id="email-connexion"
+                            name="email"
+                            placeholder="Votre adresse e-mail"
+                            autocomplete="email"
+                            required>
+                    </div>
 
-        
-        <!-- Bouton de connexion -->
-        <div class="auth-action">
+                    <!-- Mot de passe -->
+                    <div class="auth-champ">
+                        <label for="mot-de-passe-connexion">Mot de passe *</label>
+                        <input
+                            type="password"
+                            id="mot-de-passe-connexion"
+                            name="mot_de_passe"
+                            placeholder="Votre mot de passe"
+                            autocomplete="current-password"
+                            required>
+                    </div>
+                    <!-- Lien mot de passe oublié -->
+                    <p class="auth-mot-de-passe-oublie">
+                        <a href="mot-de-passe-oublie.php">
+                            Mot de passe oublié ?
+                        </a>
+                    </p>
 
-            <button type="submit" class="bouton">
-                Se connecter
-                <span aria-hidden="true">→</span>
-            </button>
 
-        </div>
+                    <!-- Bouton de connexion -->
+                    <div class="auth-action">
 
-    </form>
-    <!-- Lien vers l'inscription -->
-<p class="auth-lien-inscription">
-    Pas encore de compte ?
-    <a href="#" id="afficher-inscription">S'inscrire</a>
-</p>
+                        <button type="submit" class="bouton">
+                            Se connecter
+                            <span aria-hidden="true">→</span>
+                        </button>
 
-</div>
-<!-- Panneau photographique coulissant -->
-<div class="auth-panneau-photo">
+                    </div>
 
-    <!-- Textes et boutons du panneau photographique -->
-<div class="auth-photo-contenu">
+                </form>
+                <!-- Lien vers l'inscription -->
+                <p class="auth-lien-inscription">
+                    Pas encore de compte ?
+                    <a href="#" id="afficher-inscription">S'inscrire</a>
+                </p>
 
-    <!-- Message affiché côté connexion -->
-    <div class="auth-photo-nouveau">
-        <h2>Nouveau chez nous ?</h2>
+            </div>
+            <!-- Panneau photographique coulissant -->
+            <div class="auth-panneau-photo">
 
-        <p>
-            Rejoignez Vite & Gourmand et découvrez
-            une expérience gourmande unique.
-        </p>
+                <!-- Textes et boutons du panneau photographique -->
+                <div class="auth-photo-contenu">
 
-        <button type="button" id="auth-bouton-inscription">
-            Sign Up
-        </button>
-    </div>
+                    <!-- Message affiché côté connexion -->
+                    <div class="auth-photo-nouveau">
+                        <h2>Nouveau chez nous ?</h2>
 
-    <!-- Message affiché côté inscription -->
-    <div class="auth-photo-deja-compte">
-        <h2>Déjà un compte ?</h2>
+                        <p>
+                            Rejoignez Vite & Gourmand et découvrez
+                            une expérience gourmande unique.
+                        </p>
 
-        <p>
-            Retrouvez vos commandes et vos menus
-            en vous connectant à votre espace.
-        </p>
+                        <button type="button" id="auth-bouton-inscription">
+                            Sign Up
+                        </button>
+                    </div>
 
-        <button type="button" id="auth-bouton-connexion">
-            Sign In
-        </button>
-    </div>
+                    <!-- Message affiché côté inscription -->
+                    <div class="auth-photo-deja-compte">
+                        <h2>Déjà un compte ?</h2>
 
-</div>
-    </div> <!-- Fin du panneau photographique -->
+                        <p>
+                            Retrouvez vos commandes et vos menus
+                            en vous connectant à votre espace.
+                        </p>
 
-</div> <!-- Fin du conteneur des panneaux coulissants -->
+                        <button type="button" id="auth-bouton-connexion">
+                            Sign In
+                        </button>
+                    </div>
 
-</section> <!-- Fin de la section authentification -->
+                </div>
+            </div> <!-- Fin du panneau photographique -->
+
+        </div> <!-- Fin du conteneur des panneaux coulissants -->
+
+    </section> <!-- Fin de la section authentification -->
 
 </div>
 <script src="../Js/authentification.js" defer></script>
