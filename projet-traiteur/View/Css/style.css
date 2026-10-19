@@ -4,6 +4,7 @@
 
 * {
     box-sizing: border-box;
+    /* permet de gérer les marges et les paddings de manière plus intuitive */
 }
 
 body {
@@ -22,6 +23,7 @@ body {
     background-color: #f5e7cb;
 
     display: flex;
+    /* permet de placer les éléments sur une seule ligne */
     align-items: center;
     justify-content: space-between;
 
@@ -30,7 +32,7 @@ body {
     border-bottom: 1px solid #e4dace;
     box-shadow: 0 2px 8px rgba(73, 21, 31, 0.08);
     position: relative;
-z-index: 10;
+    z-index: 10; /* assure que l'en-tête reste au-dessus des autres éléments */
 }
 
 
@@ -59,14 +61,14 @@ z-index: 10;
 }
 
 
-/* Navigation */
+
 
 /* Navigation */
 
 .navbar {
     display: flex;
     align-items: center;
-    gap: 35px;
+    gap: 40px; /* espace entre les liens de navigation */
 }
 
 .navbar a {
@@ -91,22 +93,22 @@ z-index: 10;
 }
 
 /* Trait visible au survol et sur la page active */
-.navbar a:hover::after,
-.navbar a.active::after {
+.navbar a:hover::after, /* au survol */
+.navbar a.active::after { /* lien actif */
     transform: scaleX(1);
 }
 
 
 
-/* Bouton Inscription */
-.navbar a.btn-inscription {
+/* Bouton Inscription */ /* ajouté pour le bouton d'inscription dans la navbar */
+.navbar a.btn-inscription { /* style pour le bouton d'inscription */
     background-color: #7a1735;
     color: white;
     padding: 10px 20px;
     border-radius: 25px;
 }
 
-.navbar a.btn-inscription::after {
+.navbar a.btn-inscription::after { /* supprime le trait doré pour le bouton */
     display: none;
 }
 
@@ -136,11 +138,11 @@ main h2 {
     background-image: url('../../images/decoration/image_hero.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
 
     color: white;
     text-align: left;
-    
+
 }
 
 .hero h2 {
@@ -197,7 +199,7 @@ main h2 {
     margin: 0 0 5px;
 }
 
-.menus > h3 {
+.menus>h3 {
     margin: 0 0 35px;
 }
 
@@ -214,7 +216,7 @@ main h2 {
 
     border-radius: 10px;
 
-    overflow: hidden;
+    overflow: hidden; /* empêche les images de dépasser du conteneur */
 
     text-align: left;
 }
@@ -260,13 +262,16 @@ main h2 {
 
 /* Photo du chef */
 :root {
-    --bordeaux: #5c1a2e; /* à remplacer par TON bordeaux exact */
+    --bordeaux: #5c1a2e;
+    
 }
 
 .histoire-image {
     width: 35%;
-    position: relative;   /* obligatoire pour placer le calque */
-    overflow: hidden;     /* rien ne dépasse du conteneur */
+    position: relative;
+    /* obligatoire pour placer le calque */
+    overflow: hidden;
+    /* rien ne dépasse du conteneur */
 }
 
 .histoire-image img {
@@ -279,9 +284,11 @@ main h2 {
 }
 
 .histoire-image::after {
-    content: "";          /* obligatoire, sinon le ::after n'apparaît pas */
+    content: "";
+    /* obligatoire, sinon le ::after n'apparaît pas */
     position: absolute;
-    inset: 0;             /* top/right/bottom/left à 0 */
+    inset: 0;
+    /* top/right/bottom/left à 0 */
     pointer-events: none;
     background:
         /* 1) fondu diagonal depuis le coin haut droit */
@@ -297,7 +304,8 @@ main h2 {
 
     padding: 50px;
 
-    background-color: #5c1a2e;;
+    background-color: #5c1a2e;
+    ;
 
     color: white;
 }
@@ -334,6 +342,26 @@ main h2 {
 
 .histoire-avantages p {
     margin: 0;
+}
+
+.histoire-annees {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.histoire-nombre {
+    font-family: Georgia, serif;
+    font-size: 100px !important;
+    font-weight: normal;
+    color: #c5a45a;
+    line-height: 1;
+}
+
+.histoire-ans {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    color: #c5a45a;
 }
 
 
@@ -378,6 +406,7 @@ main h2 {
     overflow: hidden;
 
     flex-shrink: 0;
+    /* empêche l'événement de rétrécir si la fenêtre est trop petite */
 }
 
 .evenement img {
@@ -446,13 +475,174 @@ main h2 {
     text-decoration: none;
 }
 
+/* RESPONSIVE - PAGE ACCUEIL */
+
+@media (max-width: 600px) {
+    .histoire-nombre {
+    font-size: 70px;
+}
+
+.histoire-ans {
+    font-size: 24px;
+}
+
+.histoire-titre h2 {
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.histoire-avantages h3 {
+    font-size: 18px;
+}
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero .bouton {
+        display: block;
+        width: 240px;
+        max-width: 100%;
+        margin: 15px auto;
+        text-align: center;
+    }
+
+    .menus-cartes {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .menu {
+        width: 100%;
+    }
+    .histoire {
+    flex-direction: column;
+}
+
+
+.histoire-image,
+.histoire-contenu,
+.histoire-avantages {
+    width: 100%;
+}
+
+}
+
+.histoire-avantages .avantage-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.histoire-avantages .avantage-item svg {
+    color: #c5a45a;
+     width: 40px;
+    height: 40px;
+}
+
+/* =========================
+   CARROUSEL ÉVÉNEMENTS
+   MOBILE ET TABLETTE
+========================= */
+
+@media screen and (max-width: 1024px) {
+
+    .evenements-liste {
+        display: flex;
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory; 
+    }
+     .evenement {
+        scroll-snap-align: start;
+    }
+
+}
+
+/* RESPONSIVE - TABLETTE */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .menus-cartes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+}
+/* RESPONSIVE - HISTOIRE TABLETTE */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .histoire-nombre {
+    font-size: 75px;
+}
+
+.histoire-ans {
+    font-size: 24px;
+}
+
+.histoire-titre h2 {
+    font-size: 23px;
+    line-height: 1.3;
+}
+
+.histoire-avantages h3 {
+    font-size: 17px;
+}
+
+    .histoire {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .histoire-image,
+    .histoire-contenu {
+        width: 50%;
+    }
+
+    .histoire-avantages {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    padding: 30px 20px;
+    align-items: start;
+}
+
+.histoire-avantages .avantage-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 0;
+}
+
+}
+
+
+
+
+
+
 /* =========================================================
    PAGE MENUS.PHP
    ========================================================= */
 
 .page-menus {
-    background-color: #f8f3e8; /* Fond beige clair pour la page des menus */
-    color: #333333; /* Texte noir pour le contraste */
+    background-color: #f8f3e8;
+    /* Fond beige clair pour la page des menus */
+    color: #333333;
+    /* Texte noir pour le contraste */
 }
 
 
@@ -468,8 +658,8 @@ main h2 {
 .menus-decoration {
     margin: 0 0 5px;
 
-    color: #c5a45a; 
-    font-size: 50px; 
+    color: #c5a45a;
+    font-size: 50px;
 }
 
 .menus-intro h1 {
@@ -494,13 +684,13 @@ main h2 {
    ========================================================= */
 
 .menus-filtres {
-    width: 92%; 
-    max-width: 1200px; 
+    width: 92%;
+    max-width: 1200px;
 
-    margin: 15px auto 45px; 
+    margin: 15px auto 45px;
     padding: 18px 20px;
 
-    box-sizing: border-box; 
+    box-sizing: border-box;
 
     background-color: #fffdf9;
 
@@ -514,19 +704,15 @@ main h2 {
     display: grid;
 
     grid-template-columns:
-        1fr
-        1fr
-        1fr
-        1fr
-        1.3fr
-        auto;
+        1fr 1fr 1fr 1fr 1.3fr auto;
 
     gap: 14px;
 
     align-items: end;
 }
+
 .filtre-groupe {
-    display: flex; 
+    display: flex;
     flex-direction: column;
 
     gap: 8px;
@@ -536,7 +722,7 @@ main h2 {
     color: #1a1818;
 
     font-size: 11px;
-    font-weight: 600; 
+    font-weight: 600;
 }
 
 .filtre-groupe input,
@@ -1063,7 +1249,7 @@ main h2 {
 .page-menu-details {
     background-color: #f8f3e8;
     padding: 20px 5% 40px;
-        color: #171717;
+    color: #171717;
 }
 
 
@@ -1085,6 +1271,7 @@ main h2 {
     color: #c5a45a;
     font-size: 17px;
 }
+
 /* Lien du fil d'Ariane */
 .page-menu-details .fil-ariane a {
     color: #7a1735;
@@ -1103,7 +1290,7 @@ main h2 {
 /* =========================================================
    BLOC PRINCIPAL : GALERIE + INFORMATIONS
    ========================================================= */
-    
+
 .page-menu-details .menu-details-principal {
     max-width: 1200px;
     margin: 0 auto 45px;
@@ -1206,7 +1393,7 @@ main h2 {
 .page-menu-details .menu-galerie-lien strong {
     font-size: 16px;
     color: #7a1735;
-} 
+}
 
 
 /* =========================================================
@@ -1387,7 +1574,7 @@ main h2 {
     min-height: 150px;
 }
 
-.page-menu-details .menu-plat + .menu-plat {
+.page-menu-details .menu-plat+.menu-plat {
     border-left: 1px solid #dfd1bd;
 }
 
@@ -1541,7 +1728,7 @@ main h2 {
         grid-template-columns: 1fr;
     }
 
-    .page-menu-details .menu-plat + .menu-plat {
+    .page-menu-details .menu-plat+.menu-plat {
         border-left: none;
         border-top: 1px solid #dfd1bd;
     }
@@ -1588,7 +1775,6 @@ main h2 {
 
 
 
-
 /*-----------------style nv -----------*/
 
 
@@ -1607,7 +1793,7 @@ main h2 {
     background: #eee1d0;
 }
 
-.menu-image-principale > img {
+.menu-image-principale>img {
     width: 100%;
     height: 100%;
     display: block;
@@ -1709,7 +1895,7 @@ main h2 {
    ========================= */
 
 
-   /* Conteneur principal des formulaires et de la photo */
+/* Conteneur principal des formulaires et de la photo */
 .authentification-conteneur {
     width: 90%;
     max-width: 1400px;
@@ -1818,7 +2004,7 @@ main h2 {
 /* Animation douce des champs */
 .auth-champ input {
     transition: border-color 0.3s ease,
-                box-shadow 0.3s ease;
+        box-shadow 0.3s ease;
 }
 
 /* Champ sélectionné par l'utilisateur */
@@ -1867,7 +2053,7 @@ main h2 {
     cursor: pointer;
 
     transition: background-color 0.3s ease,
-                transform 0.3s ease;
+        transform 0.3s ease;
 }
 
 /* Effet au survol */
@@ -1899,6 +2085,7 @@ main h2 {
 .authentification-conteneur.mode-connexion .auth-photo-nouveau {
     display: block;
 }
+
 /* Boutons Sign Up et Sign In */
 .auth-photo-contenu button {
     margin-top: 20px;
@@ -1916,7 +2103,7 @@ main h2 {
     cursor: pointer;
 
     transition: background-color 0.3s ease,
-                color 0.3s ease;
+        color 0.3s ease;
 }
 
 /* Effet au survol */
@@ -1946,7 +2133,7 @@ main h2 {
 }
 
 /* Description du formulaire d'inscription */
-.auth-formulaire-inscription > p {
+.auth-formulaire-inscription>p {
     color: #777777;
     font-size: 15px;
     line-height: 1.6;
@@ -1976,7 +2163,7 @@ main h2 {
 }
 
 /* Description du formulaire de connexion */
-.auth-formulaire-connexion > p {
+.auth-formulaire-connexion>p {
     color: #777777;
     font-size: 15px;
     line-height: 1.6;
@@ -1984,6 +2171,7 @@ main h2 {
     margin-bottom: 30px;
     max-width: 520px;
 }
+
 /* Liens des formulaires d'authentification */
 .auth-formulaire-inscription a,
 .auth-formulaire-connexion a {
@@ -2001,71 +2189,100 @@ main h2 {
 }
 
 /* =========================
+   MESSAGES D'INSCRIPTION
+========================= */
+
+.message-inscription {/* style par defaut */ 
+    background-color: #f9e9ec;
+    color: #7a1735;
+    border: 1px solid #dbaab7;
+    border-left: 4px solid #7a1735;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 20px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+/* Message de réussite */
+
+.message-inscription.message-succes {
+    background-color: #edf6ee;
+    color: #28643c;
+    border: 1px solid #a7c9ad;
+    border-left: 4px solid #28643c;
+}
+
+
+
+
+/* =========================
    RESPONSIVE - MOBILE
    ========================= */
-   /* Bouton hamburger masqué sur ordinateur */
+/* Bouton hamburger masqué sur ordinateur */
 .menu-hamburger {
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
+
     /* Bouton Inscription dans le menu mobile */
-.navbar.menu-ouvert .btn-inscription {
-    width: auto;
-    padding: 12px 25px;
-    border-bottom: none;
-    align-self: flex-start;
-    text-align: center;
-}
+    .navbar.menu-ouvert .btn-inscription {
+        width: auto;
+        padding: 12px 25px;
+        border-bottom: none;
+        align-self: flex-start;
+        text-align: center;
+    }
+
     /* Header adapté au mobile */
-.header {
-    padding: 15px 20px;
-}
+    .header {
+        padding: 15px 20px;
+    }
 
-/* Afficher le bouton hamburger */
-.menu-hamburger {
-    display: block;
-    background: transparent;
-    border: none;
-    color: #7a1735;
-    font-size: 28px;
-    cursor: pointer;
-}
+    /* Afficher le bouton hamburger */
+    .menu-hamburger {
+        display: block;
+        background: transparent;
+        border: none;
+        color: #7a1735;
+        font-size: 28px;
+        cursor: pointer;
+    }
 
-/* Masquer la navigation classique */
-.navbar {
-    display: none;
-}
+    /* Masquer la navigation classique */
+    .navbar {
+        display: none;
+    }
 
-/* Afficher la navigation quand le menu est ouvert */
-/* Navigation ouverte sur mobile */
-.navbar.menu-ouvert {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #f8e8cc;
-    padding: 20px;
-    gap: 20px;
-    z-index: 10;
-    align-items: flex-start;
-text-align: left;
-}
+    /* Afficher la navigation quand le menu est ouvert */
+    /* Navigation ouverte sur mobile */
+    .navbar.menu-ouvert {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f8e8cc;
+        padding: 20px;
+        gap: 20px;
+        z-index: 10;
+        align-items: flex-start;
+        text-align: left;
+    }
 
-/* Style des liens du menu mobile */
-.navbar.menu-ouvert a {
-    width: 100%;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(197, 164, 90, 0.35);
-}
+    /* Style des liens du menu mobile */
+    .navbar.menu-ouvert a {
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(197, 164, 90, 0.35);
+    }
 
 
     /* Espacement de la section sur mobile */
-.authentification {
-    padding: 30px 15px;
-}
+    .authentification {
+        padding: 30px 15px;
+    }
 
     /* Conteneur principal */
     .authentification-conteneur {
