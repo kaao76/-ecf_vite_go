@@ -64,7 +64,7 @@ class ConnexionController
         } else {
             header('Location: index.php');
         }
-
+        /* code temporaire car pas d espace pour les admins et employé */
         exit;
     }
 }
