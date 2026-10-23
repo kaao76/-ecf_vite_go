@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/../../../Controller/HeaderController.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -37,8 +42,20 @@
             <a href="../Html/index.php">Accueil</a>
             <a href="../Html/menus.php">Nos menus</a>
             <a href="../Html/contact.php">Contact</a>
-            <a href="../Html/connexion.php">Connexion</a>
-            <a href="../Html/inscription.php" class="btn-inscription">Inscription</a>
+            <?php if ($estConnecte): ?>
+
+                <?php if ($estClient): ?>
+                    <a href="../Html/espace_personnel.php">Mon espace</a>
+                <?php endif; ?>
+
+                <a href="#" class="btn-inscription">Déconnexion</a>
+
+            <?php else: ?>
+
+                <a href="../Html/connexion.php">Connexion</a>
+                <a href="../Html/inscription.php" class="btn-inscription">Inscription</a>
+
+            <?php endif; ?>
         </nav>
 
     </header>
