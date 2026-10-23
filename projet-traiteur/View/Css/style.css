@@ -2405,3 +2405,84 @@ main h2 {
     color: #333333;
     margin-bottom: 15px;
 }
+
+
+
+
+
+
+
+
+/* =========================
+   ESPACE PERSONNEL
+   Structure générale
+========================= */
+
+.espace-client {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+
+    width: 92%;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+/* Menu latéral */
+
+.espace-sidebar {
+    background-color: #fffaf5;
+    border-radius: 10px;
+    padding: 25px 15px;
+}
+
+/* Identité du client */
+
+.espace-utilisateur {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Navigation */
+
+.espace-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Boutons du menu */
+
+.espace-lien {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    width: 100%;
+    padding: 13px 15px;
+
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Rubrique sélectionnée */
+
+.espace-lien.actif {
+    background-color: #49151f;
+    color: white;
+}
+
+/* Ligne de séparation */
+
+.espace-separateur {
+    height: 1px;
+    background-color: #e5dcd3;
+    margin: 25px 10px;
+}
