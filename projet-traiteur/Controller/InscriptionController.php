@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../entity/Utilisateur.php';
 require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/EmailController.php';
 
 class InscriptionController
 {
@@ -105,15 +106,36 @@ class InscriptionController
             'role_id' => 1,
             'actif' => 1
         ]);
-        $message = "Votre compte a été créé avec succès !";
-        return $message;
+
+
+
+        $idUtilisateur = $pdo->lastInsertId();
+
+        // Renouveler l'identifiant de session
+        session_regenerate_id(true);
+
+        // Enregistrer les informations du nouvel utilisateur
+        $_SESSION['id_utilisateur'] = (int) $idUtilisateur;
+        $_SESSION['prenom'] = $prenom;
+        $_SESSION['role_id'] = 1;
+
+        // Envoyer un e-mail de bienvenue après l'inscription
+        $emailController = new EmailController(); /* « PHP, crée-moi un objet de la classe EmailController,
+         que je pourrai utiliser pour envoyer des e-mails. » */
+        $emailController->envoyerBienvenue($email, $prenom); /* Objet $emailController, exécute ta méthode envoyerBienvenue() 
+        avec l'adresse e-mail et le prénom du nouvel utilisateur. » */
+
+
+        // Rediriger vers l'espace personnel
+        header('Location: espace_personnel.php');
+        exit;
     }
 }
 
 
 // Détecter l'envoi du formulaire d'inscription
 $messageInscription = '';
-
+                                    /* Est-ce que le formulaire envoyé contient un élément appelé inscription ? » */
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['inscription'])) {
     $controller = new InscriptionController();
     $messageInscription = $controller->inscrire();
