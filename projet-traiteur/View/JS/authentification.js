@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
         ".authentification-conteneur"
     );
 
+    
+
     // Bouton Sign In
     const boutonConnexion = document.getElementById(
         "auth-bouton-connexion"
